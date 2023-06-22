@@ -14,7 +14,7 @@ pipeline{
                 sh 'npm run cy:report'
             }
         }
-         stage('Report'){
+        stage('Report'){
             steps {
                 publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'mochawesome-report', reportFiles: 'report.html', reportName: 'Teste Aula Cypress - atividade 11', reportTitles: '', useWrapperFileDirectly: true])
             }
